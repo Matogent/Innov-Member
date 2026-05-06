@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saku – Plateforme de streaming légale : séries, films et animes">
+    <title>Saku</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">Saku <span></span></div>
+        <ul class="nav-links">
+            <li><a href="#projet">Le projet</a></li>
+            <li><a href="#download">Télécharger</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <p class="hero-tag">Innov'Member · EPSI Montpellier</p>
+        <h1 class="hero-title">Streaming<br><em>sans compromis.</em></h1>
+        <p class="hero-sub">Saku est une plateforme de streaming légale pour regarder vos séries, films et animes préférés en toute sérénité.</p>
+        <a href="#download" class="hero-cta">
+            Télécharger l'application
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+            </svg>
+        </a>
+        
+    </header>
+
+    <main>
+
+        <section class="project-grid" id="projet">
+            <div class="reveal">
+                <p class="eyebrow">Le Projet</p>
+                <h2 class="section-title">Notre Projet<br><em>Innov'Member</em></h2>
+                <div class="body-text">
+                    <p>Saku est une plateforme de streaming totalement légale qui vous permettra de regarder en toute sécurité toutes vos séries, films et animes préférés.</p>
+                    <p>Nous l'avons développé suite à l'Innov'Member de l'EPSI de Montpellier.</p>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <h3>Notre équipe — 5 membres</h3>
+                <ul class="team-list">
+                    <li>Membre 1</li>
+                    <li>Membre 2</li>
+                    <li>Membre 3</li>
+                    <li>Membre 4</li>
+                    <li>Membre 5</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="download-section reveal" id="download">
+            <div class="download-header">
+                <p class="eyebrow">Application Mobile</p>
+                <h2>Téléchargez Saku</h2>
+            </div>
+
+            <div class="download-container">
+
+                <div class="download-block ios">
+                    <div class="image-wrapper">
+                        <img src="IOS.png" alt="iOS App Store">
+                    </div>
+                    <h3>iOS</h3>
+                    <p>Disponible sur l'App Store</p>
+                    <a href="https://apps.apple.com" class="download-btn" target="_blank">Télécharger</a>
+                </div>
+
+                <div class="download-block android">
+                    <div class="image-wrapper">
+                        <img src="Android.png" alt="Android Google Play">
+                    </div>
+                    <h3>Android</h3>
+                    <p>Disponible sur Google Play</p>
+                    <a href="https://play.google.com" class="download-btn" target="_blank">Télécharger</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-logo">Saku </div>
+        <p>&copy; 2025 Saku · Tous droits réservés · EPSI Montpellier</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
